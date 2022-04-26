@@ -1,0 +1,729 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Mobile First */
+/* Mobile and Tablet Styles */
+body img{
+    width: auto;
+    height: auto;
+}
+
+body li{
+    list-style: none;
+}
+
+body nav li{
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 300px;
+}
+
+body a{
+    text-decoration: none;
+    color: rgb(152, 180, 161);
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body h1{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+body span{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
+
+#logo{
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+
+    margin: 5px 0 5px 5px;
+}
+
+#logoFooter{
+    border-style: solid;
+    border-color: #1DB954;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+
+    margin: 3px;
+}
+
+
+/* Mobile Styles */
+.container{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+
+    grid-template-areas: 
+    "box-1"
+    "box-2"
+    "box-3"
+    "box-4"
+    ;
+}
+
+/*box-1*/
+.box-1{
+
+    grid-area: box-1;
+    background-image: linear-gradient(#006241, #1DB954);
+}
+
+.box-1 .encabezado{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box-1 .encabezado__menu nav ol{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.box-1 .encabezado__menu nav ol li{
+    margin: 0.3rem;
+}
+
+.box-1 .encabezado__menu nav ol li a{
+
+    font-size: 10px;
+    font-weight: 300px;
+    color: #c1ecd0;
+}
+
+
+/*box-2*/
+.box-2{
+
+    padding: 2rem;
+    grid-area: box-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-2 .principal{
+
+    margin: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-2 .principal__formulario{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 5px;
+    border-style: solid;
+    border-color: #006241;
+    background-image: url(imagenes/Girgolas\ \(3\).png);
+    background-repeat: repeat;
+}
+
+.box-2 .inicioSesion{
+
+    margin: 5px;
+    padding: 5px;
+    color: aliceblue;
+    background-color: #006241;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-2 .inicioSesion__div{
+
+    margin: 5px;
+    padding: 5px;
+}
+
+.box-2 .principal__articulo{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.box-2 .principal__articulo .articulo{
+
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(3, min-content);
+
+    grid-template-areas:
+    "elm1"
+    "elm2"
+    "elm3"
+    ;
+
+    gap: 5px 5px;
+}
+
+.box-2 .principal__articulo .elm1{
+
+    grid-area: elm1;
+}
+
+.box-2 .principal__articulo .elm2{
+
+    grid-area: elm2;
+}
+
+.box-2 .principal__articulo .elm2 img{
+
+    /*width: 200px;
+    height: 200px;
+    */
+    object-fit: cover;
+}
+
+.box-2 .principal__articulo .elm3{
+
+    grid-area: elm3;
+    background-color: #0080376c;
+}
+
+.box-2 .principal__articulo .elm3 article{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*box-3*/
+.box-3{
+    
+    grid-area: box-3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*box-4*/
+.box-4{
+
+    grid-area: box-4;
+    background-image: linear-gradient(to bottom, #006241, #1DB954);
+}
+
+.box-4 .footer{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/*Sitio n2*/
+.box-2 .principal-2 {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+
+    grid-template-areas: 
+    "elm1"
+    "elm2"
+    "elm3"
+    ;
+}
+
+.box-2 .principal-2 .articulo-1{
+    grid-area: elm1;
+
+    background-image: radial-gradient(#00A550, #A9BA9D);
+    margin: 30px;
+    padding: 30px;
+}
+
+.box-2 .principal-2 .articulo-2{
+    grid-area: elm2;
+
+    background-image: radial-gradient(#00A550, #A9BA9D);
+    margin: 20px;
+    padding: 20px;
+}
+
+.box-2 .principal-2 .articulo-3{
+    grid-area: elm3;
+
+    background-image: radial-gradient(#00A550, #A9BA9D);
+    margin: 20px;
+    padding: 20px;
+}
+
+.box-2 .principal-2 div{
+
+    margin: 7px;
+    padding: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #006241;
+    background-color: #00A550;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Sitio n3*/
+.box-2 .principal-3{
+
+    padding: 3px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-2 .principal-3 .menuRecetas nav ol{
+
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-2 .principal-3 .menuRecetas nav ol li{
+
+    background-color: #6aaa80;
+
+    margin: 20px;
+    padding: 1px 3px 1px 3px;
+
+    border-style: solid;
+    border-color: #006241;
+    border-radius: 8px;
+}
+
+.box-2 .principal-3 .menuRecetas nav ol li a{
+    color: #033826;
+}
+
+
+.box-2 .principal-3 .recetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding: 20px;
+}
+
+.box-2 .principal-3 .recetas div{
+
+    font-size: 10px;
+
+    width: 200px;
+    height: 400px;
+
+    margin: 20px;
+    padding: 20px;
+    border: solid;
+    border-color: #006241;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.box-2 .principal-3 .recetas div p{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-2 .principal-3 .recetas div p span{
+    
+    margin: 5px;
+    color: #6af0c3;
+}
+
+
+
+/*Sitio n4*/
+.box-2 .principal-4{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.box-2 .principal-4 .galeria {
+    margin: 5px;
+    border: 1px solid #dae4e0;
+    width: 100px;
+}
+      
+      
+.box-2 .principal-4 .galeria img {
+    width: 100%;
+    height: auto;
+}
+      
+.box-2 .principal-4 .descripcion {
+    padding: 15px;
+    text-align: center;
+
+    font-size: 5px;
+}
+
+.box-2 .principal-4 .galeria:hover {
+
+    z-index: 100;
+    border: 1px solid #006241;
+    background-color: #008037;
+}
+
+
+
+/*sitio n5*/
+.box-2 .principal-5 div{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-2 .principal-5 div img{
+
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+
+
+/*sitio n6*/
+.box-2 .principal-6{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-2 .principal-6 form{
+
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(7, min-content);
+
+    grid-area: 
+    "div1"
+    "div2"
+    "div3"
+    "div4"
+    "div5"
+    "div6"
+    "div7"
+    ;
+
+    gap: 30px;
+
+    margin: 100px 20px 20px 20px;
+    border: 2px solid #006241;
+    background-image: url(imagenes/Girgolas\ \(2\).png);
+}
+
+
+
+/**/
+/*consultas de medios*/
+
+/* Mobile and Tablet Styles */
+@media only screen and (max-width: 768px) {
+
+    body{
+        font-size: small;
+    }
+
+    body img{
+        width: auto;
+        max-width: 100px;
+        height: auto;
+        max-height: 100px;
+    }
+
+    .box-1 .encabezado{
+        align-items: center;
+    }
+
+    .box-1 .encabezado .encabezado__icono{
+
+        font-size: 30px;
+        position: absolute;
+        right: 10px;
+    }
+
+    #sidebar{
+
+        background-color: #006241;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    
+        height: 100vh;
+        width: 80%;
+        max-width: 300px;
+    
+        padding: 1rem;
+    
+        transform: translateX(-100%);
+
+        transition: transform 0.5s;
+    }
+    
+    #sidebar .menu{
+    
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        font-size: 15px;
+        color: #85c59b;
+    }
+    
+    #sidebar:target{
+        transform: translateX(0);
+    }
+
+}
+
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 769px) {
+
+    .container{
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px min-content 200px min-content;
+    
+        grid-template-areas: 
+        "box-1 box-1"
+        "box-2 box-2"
+        "box-3 box-3"
+        "box-4 box-4"
+        ;
+    }
+
+    .box-1 .encabezado__menu nav ol li{
+        margin: 1rem;
+    }
+
+    .box-1 .encabezado__menu nav ol li a{
+        font-size: 20px;
+    }
+
+    .box-1 .encabezado .encabezado__menu #sidebar .menu .menu__salir{
+        display: none;
+    }
+
+    .box-1 .encabezado .encabezado__icono{
+        display: none;
+    }
+
+    .box-1{
+
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+    }
+
+    .box-2 .principal__articulo .articulo{
+
+        grid-template-columns: 2;
+        grid-template-rows: repeat(2, min-content);
+
+        grid-template-areas:
+        "elm1 elm3"
+        "elm2 elm3"
+        ;
+    }
+
+    .box-2 .principal__formulario .inicioSesion {
+
+        transition: 1s;
+    }
+
+    .box-2 .principal__formulario .inicioSesion:hover {
+
+        height: 500px;
+        width: 500px;
+        font-size: 25px;
+        justify-content: center;
+
+    }
+
+    /*sitio n2*/
+    .box-2 .principal-2 {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content;
+    
+        grid-template-areas: 
+        "elm2 elm1"
+        "elm3 elm1"
+        ;
+    }
+
+    /*sitio n3*/
+    .box-2 .principal-3 .menuRecetas nav ol{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: space-around;
+        
+    }
+
+    .box-2 .principal-3 .recetas div{
+
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        width: 500px;
+        height: 500px;
+
+        font-size: 20px;
+        margin: 300px;
+
+        transition: 1s;
+    }
+
+    .box-2 .principal-3 .recetas div:hover{
+
+        height: 800px;
+        width: 800px;
+        background-image: linear-gradient(#006241, #1DB954);
+        font-size: 25px;
+        z-index: 3;
+
+    }
+
+
+    /*sitio n4*/
+    .box-2 .principal-4 .galeria {
+        width: 180px;
+    }
+
+    .box-2 .principal-4 .descripcion {
+        font-size: 15px;
+    }
+
+    .box-2 .principal-4 .galeria:hover {
+        transform: scale(1.5, 1.5);
+    }
+
+    /*sitio n5*/
+    .box-2 .principal-5 div img{
+
+        width: 400px;
+        height: 400px;
+    }
+
+    .rotate-center {
+
+        -webkit-animation: rotate-center 0.6s ;
+                animation: rotate-center 0.6s ;
+    }
+
+    @-webkit-keyframes rotate-center {
+
+        0% {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+      @keyframes rotate-center {
+        0% {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+      
+
+    /*sitio n6*/
+    .box-2 .principal-6 form{
+
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: repeat(4, min-content);
+    
+        grid-area: 
+        "div1 div2"
+        "div3 div4"
+        "div5 div6"
+        "div7 ."
+        ;
+
+        transition: 1s;
+    }
+
+    .box-2 .principal-6 form:hover{
+
+        transform: scale(1.5, 1.5);        
+    }
+
+}

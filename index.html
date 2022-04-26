@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+
+    <!--Link de ruta de acceso a hoja de estilos-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <!--Font family-->
+    <!--font-family principal-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    
+    <!--font family secundario-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+    <!--Iconos  -->
+    <script src="https://kit.fontawesome.com/e0d0b4a478.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <!--div CONTENEDOR-->
+    <div class="container">
+
+        <!--box 1: HEADER-->
+        <div class="box-1">
+
+            <header class="encabezado">
+
+                <div class="encabezado__logo">
+                    <img id="logo" src="imagenes/Girgolas (6).png" alt="logo de la pagina: Girgola Earth is Mycelium">
+                </div>
+
+                <div class="encabezado__icono">
+                    <a href="#sidebar"><i class="header__icono fas fa-bars"></i></a>
+                </div>
+                
+                <div class="encabezado__menu">
+                    <nav id="sidebar">
+                        <ol class="menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="paginas/girgolas.html">Girgolas</a></li>
+                            <li><a href="paginas/recetas.html">Recetas</a></li>
+                            <li><a href="paginas/imagenes.html">Galeria de imagenes</a></li>
+                            <li><a href="paginas/nosotros.html">Nosotros</a></li>
+
+                            <li class="menu__salir"><a href="#">SALIR DEL MENU</a></li>
+                        </ol>
+                    </nav>
+                </div>
+
+            </header>
+        </div>
+
+
+        <!--box 2: MAIN-->
+        <div class="box-2">
+
+            <main class="principal">
+
+                <h2>Girgola <span>Earth is Mycelium</span></h2>
+
+                <!--Inicio de sesion-->
+                <div class="principal__formulario">
+
+                    <form class="inicioSesion">
+
+                        <div class="inicioSesion__div">                
+                            <h1>Inicio de sesion</h1>
+                            <label for="email">Ingrese su email</label>
+                            <input type="email" name="email" id="email" placeholder="nombre@ejemplo.com">
+                        </div>
+        
+                        <div class="inicioSesion__div">
+                            <label for="contraseña">Ingrese su contraseña</label>
+                            <input type="password" name="contraseña" id="contraseña" placeholder="********">
+                        </div>
+        
+                        <div class="inicioSesion__div">
+                            <input type="submit" value="Enviar formulario"/>
+                        </div>
+    
+                        <div class="inicioSesion__div">
+                            <span>¿Aun no tiene cuenta?</span>
+                            <a href="paginas/registro.html" target="_blank">Crea tu cuenta</a>
+                        </div>
+
+                    </form>
+                    
+                </div>
+
+                <!--Contenido de pagina-->
+                <div class="principal__articulo">
+
+                    <div class="articulo">
+
+                        <div class="elm1"><h1>Pleurotus ostreatus, La gírgola</h1></div>
+                        
+                        <div class="elm2"><img src="imagenes/girgola al plato.jpg" alt="imagen de girgola"></div>
+
+                        <div class="elm3">
+                            <article>
+        
+                                <h2>Hongos con mucho potencial: las gírgolas, ricas y saludables</h2>
+                                
+                                <p>La gírgola, seta de ostra, champiñón ostra o pleuroto ostra (Pleurotus ostreatus) es una especie de hongo basidiomiceto del orden Agaricales. Se distribuye por gran parte del Holártico, en zonas templadas, aunque se cultiva en muchas partes del mundo.1​ Es comestible, estrechamente emparentado con la seta de cardo (Pleurotus eryngii), que se consume ampliamente por su sabor y la facilidad de su identificación2​. No confundir con el champiñón común o champiñón de París, cuyo nombre científico es Agaricus bisporus. Su cultivo ya estaba generalmente extendido por los países centroeuropeos de forma tradicional, aunque no fue hasta los años sesenta, que en Hungría, Alemania y la de entonces Checoslovaquía ampliaron los fundamentos del cultivo de este hongo, extendiéndose así por el resto de Europa.</p>
+                            
+                            </article>
+                        </div>
+        
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+
+        <!--box 3: SIDEBAR O ASIDE-->
+        <div class="box-3">
+
+            <aside class="aside">
+
+                <h1>Cultivo de girgolas en casa!</h1>
+                <iframe src="https://www.youtube.com/embed/wzhAp9l85xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            </aside>
+        </div>
+
+
+        <!--box 4: FOOTER-->
+        <div class="box-4">
+
+            <footer class="footer">
+
+                <p>Derechos reservados <span>Girgola, Earth is Mycelium</span></p>
+                <img id="logoFooter" src="imagenes/Girgolas (7).png">
+        
+            </footer>
+        </div>
+
+    </div>
+    
+</body>
+</html>
