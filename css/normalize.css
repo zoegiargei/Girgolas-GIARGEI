@@ -38,8 +38,6 @@ body span{
     font-family: 'Shadows Into Light', cursive;
 }
 
-
-
 #logo{
     border-radius: 50px;
     width: 90px;
@@ -50,7 +48,6 @@ body span{
 
 #logoFooter{
     border-style: solid;
-    border-color: #1DB954;
     border-radius: 50px;
     width: 50px;
     height: 50px;
@@ -60,11 +57,11 @@ body span{
 
 
 /* Mobile Styles */
-.container{
+.container-nb{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, max-content);
+    grid-template-rows: repeat(4, min-content);
 
     grid-template-areas: 
     "box-1"
@@ -78,35 +75,6 @@ body span{
 .box-1{
 
     grid-area: box-1;
-    background-image: linear-gradient(#006241, #1DB954);
-}
-
-.box-1 .encabezado{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.box-1 .encabezado__menu nav ol{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    margin-top: 25px;
-}
-
-.box-1 .encabezado__menu nav ol li{
-    margin: 0.3rem;
-}
-
-.box-1 .encabezado__menu nav ol li a{
-
-    font-size: 10px;
-    font-weight: 300px;
-    color: #c1ecd0;
 }
 
 
@@ -222,17 +190,32 @@ body span{
 .box-3{
     
     grid-area: box-3;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+    height: min-content;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #006241dc;
 }
 
+.box-3 .aside{
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
 
 /*box-4*/
 .box-4{
 
     grid-area: box-4;
+    /*
     background-image: linear-gradient(to bottom, #006241, #1DB954);
+    */
+    background-color: #212529;
+    padding-top: 5px;
 }
 
 .box-4 .footer{
@@ -240,11 +223,13 @@ body span{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    color: #F4F4F4;
 }
 
 
 /*Sitio n2*/
-.box-2 .principal-2 {
+.box-2 .principal-2{
 
     display: grid;
     grid-template-columns: 1fr;
@@ -258,37 +243,42 @@ body span{
 }
 
 .box-2 .principal-2 .articulo-1{
+
     grid-area: elm1;
 
     background-image: radial-gradient(#00A550, #A9BA9D);
-    margin: 30px;
-    padding: 30px;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .box-2 .principal-2 .articulo-2{
+    
     grid-area: elm2;
 
     background-image: radial-gradient(#00A550, #A9BA9D);
-    margin: 20px;
-    padding: 20px;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .box-2 .principal-2 .articulo-3{
+
     grid-area: elm3;
 
     background-image: radial-gradient(#00A550, #A9BA9D);
-    margin: 20px;
-    padding: 20px;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .box-2 .principal-2 div{
 
-    margin: 7px;
-    padding: 1px;
+    height: min-content;
+
+    padding: 1rem;
+    margin: 1rem;
     border-style: solid;
+
     border-radius: 5px;
     border-color: #006241;
-    background-color: #00A550;
 
     display: flex;
     flex-direction: column;
@@ -300,6 +290,7 @@ body span{
 /*Sitio n3*/
 .box-2 .principal-3{
 
+    max-width: 80%;
     padding: 3px;
 
     display: flex;
@@ -337,6 +328,7 @@ body span{
 
 
 .box-2 .principal-3 .recetas{
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -382,6 +374,8 @@ body span{
 /*Sitio n4*/
 .box-2 .principal-4{
 
+    max-width: 95%;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -392,6 +386,7 @@ body span{
 }
 
 .box-2 .principal-4 .galeria {
+
     margin: 5px;
     border: 1px solid #dae4e0;
     width: 100px;
@@ -434,6 +429,10 @@ body span{
     height: 50px;
     margin: 20px;
     border-radius: 50%;
+}
+
+.aside-nos{
+    display: none;
 }
 
 
@@ -485,57 +484,6 @@ body span{
         font-size: small;
     }
 
-    body img{
-        width: auto;
-        max-width: 100px;
-        height: auto;
-        max-height: 100px;
-    }
-
-    .box-1 .encabezado{
-        align-items: center;
-    }
-
-    .box-1 .encabezado .encabezado__icono{
-
-        font-size: 30px;
-        position: absolute;
-        right: 10px;
-    }
-
-    #sidebar{
-
-        background-color: #006241;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10;
-    
-        height: 100vh;
-        width: 80%;
-        max-width: 300px;
-    
-        padding: 1rem;
-    
-        transform: translateX(-100%);
-
-        transition: transform 0.5s;
-    }
-    
-    #sidebar .menu{
-    
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-
-        font-size: 15px;
-        color: #85c59b;
-    }
-    
-    #sidebar:target{
-        transform: translateX(0);
-    }
 
 }
 
@@ -544,40 +492,43 @@ body span{
 /* Desktop Styles */
 @media only screen and (min-width: 769px) {
 
-    .container{
+    .container-nb{
 
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 100px min-content 200px min-content;
+        grid-template-columns: repeat(2, 1fr), min-content;
+        grid-template-rows: max-content min-content min-content;
     
         grid-template-areas: 
-        "box-1 box-1"
-        "box-2 box-2"
-        "box-3 box-3"
-        "box-4 box-4"
+        "box-1 box-1 box-1"
+        "box-2 box-2 box-3"
+        "box-4 box-4 box-4"
         ;
     }
 
-    .box-1 .encabezado__menu nav ol li{
-        margin: 1rem;
+    .box-3{
+        width: min-content;
+        
     }
 
-    .box-1 .encabezado__menu nav ol li a{
-        font-size: 20px;
+    header div ol li .scale-up-center {
+        
+        transition: 1.5s;
+        margin-right: 3rem;
+    
     }
+    
+    .scale-up-center:hover {
 
-    .box-1 .encabezado .encabezado__menu #sidebar .menu .menu__salir{
-        display: none;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        background-color: rgba(240, 248, 255, 0.685);
     }
-
-    .box-1 .encabezado .encabezado__icono{
-        display: none;
-    }
-
-    .box-1{
-
-        position: fixed;
-        z-index: 10;
-        width: 100%;
+    
+    @keyframes scale-down-center {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0.5);
+        }
     }
 
     .box-2 .principal__articulo .articulo{
@@ -608,7 +559,8 @@ body span{
     /*sitio n2*/
     .box-2 .principal-2 {
 
-        display: grid;
+        background-image: url(/css/imagenes/Girgolas\ \(3\).png);
+
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content min-content;
     
@@ -616,6 +568,8 @@ body span{
         "elm2 elm1"
         "elm3 elm1"
         ;
+
+
     }
 
     .shadow-pop-tr:hover {
@@ -653,25 +607,30 @@ body span{
       }
 
     /*sitio n3*/
+
+
     .box-2 .principal-3 .menuRecetas nav ol{
+
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     
-        justify-content: space-between;
-        align-items: stretch;
-        align-content: space-around;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: center;
         
     }
 
     .box-2 .principal-3 .recetas div{
 
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
         width: 500px;
-        height: 500px;
+        height: 600px;
 
         font-size: 20px;
         margin: 300px;
@@ -687,6 +646,12 @@ body span{
         font-size: 25px;
         z-index: 3;
 
+    }
+
+    .box-3{
+
+        height: 100%;
+        width: min-content;
     }
 
 
@@ -756,8 +721,7 @@ body span{
     }
 
     .box-2 .principal-6 form:hover{
-
         transform: scale(1.5, 1.5);        
     }
-
+    
 }
